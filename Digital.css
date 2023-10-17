@@ -181,12 +181,12 @@ section{
     line-height: 1.6;
     color: var(--black);
 }
-.product .product-row .product-content .orderNow{
+.product .product-row .product-content .SeeMore{
     height: 3rem;
     margin-top: 2rem;
     margin-bottom: 3rem;
 }
-.product .product-row .product-content .orderNow button{
+.product .product-row .product-content .SeeMore button{
     font-size: 1.8rem;
     background-color: var(--black);
     color: var(--white);
@@ -194,7 +194,7 @@ section{
     padding: .7rem 2rem;
     cursor: pointer;
 }
-.product .product-row .product-content .orderNow button:hover{
+.product .product-row .product-content .SeeMore button:hover{
     font-size: 1.5rem;
 }
 
