@@ -29,15 +29,21 @@
         <nav class="navbar">
             <a href="#home">home</a>
             <a href="#product">product</a>
-            <a href="#blogs">best seller</a>
+            <a href="#bestseller">best seller</a>
             <a href="#review">review</a>
             <a href="#contact">contact</a>
         </nav>
         <div class="icon">
+            <i class="fas fa-shopping-cart"></i>
             <i class="fas fa-bars" id="menu-bar"></i> 
         </div>
     </header>
     <!-- header section end here  -->
+    <script>
+        document.querySelector('.fa-shopping-cart').addEventListener('click', function() {
+          window.location.href = 'login.html';
+        });
+      </script>
 
     <!-- home section start here  -->
     <section class="home" id="home">
@@ -173,9 +179,9 @@
     <!-- product section end here  -->
 
     <!-- blogs section st art here  -->
-    <section class="blogs" id="blogs">
+    <section class="bestseller" id="bestseller">
 
-        <div class=" swiper blogs-row">
+        <div class=" swiper bestseller-row">
             <div class="swiper-wrapper">
                 <div class=" swiper-slide box">
                     <div class="img">

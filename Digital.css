@@ -198,7 +198,7 @@ section{
     font-size: 1.5rem;
 }
 
-.blogs{
+.bestseller{
     min-height: 50vh;
     display: flex;
     align-items: center;
@@ -206,42 +206,42 @@ section{
     background-size: cover;
     background-position: center center;
 }
-.blogs  .blogs-row .box {
+.bestseller  .bestseller-row .box {
     display: flex;
     align-items: center;
-    background-color: var(--white);
+    background-color: rgba(238, 168, 87, 0.822);;
     flex-wrap: wrap;
 }
-.blogs .blogs-row .box .img{
+.bestseller .bestseller-row .box .img{
     flex: 1 1 45rem;
 }
-.blogs .blogs-row .box .img img{
+.bestseller .bestseller-row .box .img img{
     width: 100%;
     padding: 5rem;
 }
-.blogs .blogs-row .box .content{
+.bestseller .bestseller-row .box .content{
     flex: 1 1 45rem;
     padding: 2rem;
 }
-.blogs .blogs-row .box .content h3{
+.bestseller .bestseller-row .box .content h3{
     font-size: 3.5rem;
-    color: var(--black);
+    color: var(--white);
     text-shadow: var(--box-shadow);
 
 }
-.blogs .blogs-row .box .content p{
+.bestseller .bestseller-row .box .content p{
     font-size: 1.6rem;
-    color: var(--black);
+    color: var(--white);
     padding: 1rem 0;
     line-height: 1.8;
     
 }
-.blogs .blogs-row .box .content a{
+.bestseller .bestseller-row .box .content a{
     font-size: 2rem;
     cursor: pointer;
 }
-.blogs .blogs-row .box .content a:hover{
-    color: var(--black);
+.bestseller .bestseller-row .box .content a:hover{
+    color: var(--white);
     text-shadow: var(--box-shadow);
 }
 

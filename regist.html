@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Regist</title>
+    <link href="images/logo.png" rel="icon">
+    
+    <style>
+    html {
+        height: 100%;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: url(images/backk.jpeg) no-repeat center center fixed;
+    }
+
+    .login-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 400px;
+        padding: 40px;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.5);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+        border-radius: 10px;
+    }
+
+    .login-box h2 {
+        margin: 0 0 30px;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+    }
+
+    .login-box .user-box {
+        position: relative;
+    }
+
+    .login-box .user-box input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        background: transparent;
+    }
+
+    .login-box .user-box label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        pointer-events: none;
+        transition: .5s;
+    }
+
+    .login-box .user-box input:focus ~ label,
+    .login-box .user-box input:valid ~ label {
+        top: -20px;
+        left: 0;
+        color: #03e9f4;
+        font-size: 12px;
+    }
+
+    .login-box .login-link {
+        font-size: 12px;
+        color: #fff
+    }
+
+    .login-box form button {
+        display: inline-block;
+        padding: 10px 20px;
+        color: #03e9f4;
+        font-size: 16px;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: .5s;
+        margin-top: 40px;
+        letter-spacing: 4px;
+        border: 1px solid #03e9f4;
+        background: transparent;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .login-box form button:hover {
+        color: #fff;
+        background: #03e9f4;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+    }
+
+    .login-box form button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #03e9f4;
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.5s;
+    }
+
+    .login-box form button:hover::before {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    .login-box .login-link {
+            font-size: 12px;
+            color: #fff;
+            margin-top: 5px; /* Adjust the margin top as desired */
+            margin-left: 5px; /* Adjust the margin left as desired */
+        }
+    .login-box .login-link a {
+        display: inline-block;
+        padding: 5px 5px; /* Adjust the padding as desired */
+        margin-left: 15px;
+        color: #03e9f4;
+        font-size: 14px; /* Adjust the font size as desired */
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: .5s;
+        margin-top: 40px;
+        letter-spacing: 2px; /* Adjust the letter spacing as desired */
+        border: 1px solid #03e9f4;
+        background: transparent;
+        position: relative;
+        cursor: pointer;
+    }
+    .login-box .login-link a:hover {
+        color: #fff;
+        background: #03e9f4;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4, 0 0 100px #03e9f4;
+    }
+
+    .login-box .login-link a::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #03e9f4;
+        z-index: -1;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.5s;
+    }
+
+    .login-box .login-link a:hover::before {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+</style>
+</head>
+<body>
+    <div class="login-box">
+        <h2>Register</h2>
+         <form name="registerForm" method="post">
+            <div class="user-box">
+                <input type="text" name="Uname" required="">
+                <label>Username</label>
+            </div>
+            <div class="user-box">
+                <input type="password" name="Pass" required="">
+                <label>Password</label>
+            </div>
+            <button type="submit" onclick="registerUser(event)">Register</button>
+        </form>
+        <p class="login-link" style="font-size: 18px;">Have an account?<a href="login.html" class="login-link">Login Now!</a></p>
+    </div>
+    <script>
+        function registerUser(event) {
+            event.preventDefault();
+
+            var username = document.forms["registerForm"]["Uname"].value;
+            var password = document.forms["registerForm"]["Pass"].value;
+            
+            // Check if both username and password are provided
+            if (username.trim() === "" || password.trim() === "") {
+            alert("Please check your username or password again !");
+            return;
+            }
+
+            var newUser = { username: username, password: password };
+
+            // Mengambil data pengguna yang terdaftar dari localStorage
+            var users = JSON.parse(localStorage.getItem("users")) || [];
+
+            // Menambahkan pengguna baru ke dalam daftar pengguna
+            users.push(newUser);
+
+            // Menyimpan daftar pengguna yang telah diperbarui ke dalam localStorage
+            localStorage.setItem("users", JSON.stringify(users));
+
+            alert("Registration successful! You can now login.");
+            window.location.href = "login.html";
+        }
+    </script>
+</body>

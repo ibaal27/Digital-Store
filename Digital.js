@@ -28,7 +28,7 @@ var swiper = new Swiper(".product-row", {
       },
     },
   });
-  var blogsSwiper = new Swiper(".blogs-row", {
+  var blogsSwiper = new Swiper(".bestseller-row", {
     spaceBetween: 30,
     loop: true,
     centeredSlides: true,
